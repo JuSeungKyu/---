@@ -1,0 +1,16 @@
+#questionBox{
+	margin-top: 50px;
+}
+
+ul{
+	line-height:180%
+}
+
+p{
+	display: inline-block;
+	font-size: 15px;
+}
+
+button{
+	margin-left: 60px; 
+}
