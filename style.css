@@ -1,16 +1,25 @@
 #questionBox{
 	margin-top: 50px;
+
 }
 
 ul{
 	line-height:180%
-}
-
-p{
 	display: inline-block;
-	font-size: 15px;
+	width: 300px
+	margin-right: 0px;
+}
+li{
+	margin-top: 20px;
+	font-size: 20px;
+	/*display: inline-block;*/
+	width: 300px
 }
 
 button{
 	margin-left: 60px; 
+}
+
+#answerBox{
+	display: inline-block;
 }
