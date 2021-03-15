@@ -1,6 +1,6 @@
 let questionList = [];
 let rightAnswer = [];
-let wrongAnswer = [[]];
+let wrongAnswer = [];
 
 questionList.push("현재 수행 중에 있는 명령어 코드를 저장하고 있는 임시 저장 장치는?");
 rightAnswer.push("명령 레지스터");
@@ -12,7 +12,7 @@ function randomNum(min, max){
 }
 
 function writeQuestion(randomNumber){
-	rightAnswerNumber = randomNum(0, 4);
+	rightAnswerNumber = randomNum(0, 3);
 	answer = rightAnswerNumber;
 
 	console.log(rightAnswerNumber);
@@ -21,7 +21,7 @@ function writeQuestion(randomNumber){
 
 	for(let i=0;i<4;i+=1){
 		if(i < rightAnswerNumber){
-			textArray[i].innerHTML = wrongAnswer[randomNumber+1][i];
+			textArray[i].innerHTML = wrongAnswer[randomNumber][i];
 			console.log(textArray[i]);
 		}
 		else if(i == rightAnswerNumber){
@@ -29,13 +29,9 @@ function writeQuestion(randomNumber){
 			console.log(textArray[i]);
 		}
 		else{
-			textArray[i].innerHTML = wrongAnswer[randomNumber+1][i-1];
+			textArray[i].innerHTML = wrongAnswer[randomNumber][i-1];
 			console.log(textArray[i]);
 		}
-	}
-
-	for(let i=1;i<4;i+=1){
-		textArray[i].innerHTML = wrongAnswer[randomNumber+1][i-1];
 	}
 }
 
@@ -75,5 +71,8 @@ document.querySelector("#choice2").onclick = function() {
 }
 document.querySelector("#choice3").onclick = function() {
 	choice(3);
+}
+document.querySelector("#nextButoon").onclick = function() {
+	writeQuestion(0);
 }
 
